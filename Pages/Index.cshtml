@@ -1,16 +1,22 @@
 ﻿@page
-@model IndexModel
+@model SNetworkASPNet.ViewModels.Account.MainViewModel
 @{
     ViewData["Title"] = "Главная";
 }
 
 <div class="row">
     <div class="side">
-        Описание социальной сети
+        <div class="center">
+            Пользуйтесь нашей самой крутой соцсетью! 
+            Регистрируйтесь всего за 2 минуты, делитесь мыслями, находите новых друзей.
+        </div>
+        <img class="main-img" src="images/pngwing.com.png" />
     </div>
     <div class="main">
-        Блок регистрации
-        Блок авторизации
+        <div class="main">
+            <partial name="Login" model="Model.LoginView" />
+            <partial name="Register" model="Model.RegisterView" />
+        </div>
     </div>
 
 </div>
